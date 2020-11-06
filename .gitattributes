@@ -1,5 +1,3 @@
-# Auto detect text files and perform LF normalization
-* text=auto
 import java.util.Scanner;
 import java.io.*;
 
@@ -13,7 +11,8 @@ class mortgageapplacations{
 		System.out.println("4 - Exit");
 int Choice = in.nextInt();
 			switch (Choice) {
-				case 1: System.out.println(loanCalc);
+				case 1: System.out.println("You have selected the Loan Approval Calculator");
+				loanCalc();
 				break;
 				case 2:
 				System.out.println("You have selected the Monthly Payment Calculator");
@@ -31,8 +30,25 @@ int Choice = in.nextInt();
 	public static boolean loanCalc (boolean flag){
 		Scanner in = new Scanner(System.in);
 		flag = true;
-		System.out.print("Approved or no");
-		int cow = in.nextInt();
-		return flag;
+		System.out.print("Lets see if you are approved");
+		System.out.println("Type your first name");
+		String firstName = in.next();
+		System.out.println("Type your Last name");
+		String lastName = in.next();
+		System.out.println("Please enter your annual gross income (nearest dollar)");
+		int annualIncome = in.nextInt();
+		System.out.println("Please enter your Total Savings (nearest dollar)");
+		int totalSavings = in.nextInt();
+		System.out.println("Please enter your credit score (300-850) ");
+		int creditScore = in.nextInt();
+		System.out.println("Please enter the amount of month on this loan 180 or 360");
+		int numMonth = in.nextInt();
+		System.out.println("Please enter your desired home value (nearest dollar) ");
+		int homeValue = in.nextInt();
+		if(homeValue >= 3.5*annualIncome){
+			flag = false;
+		}
+		
 	}
 }
+
