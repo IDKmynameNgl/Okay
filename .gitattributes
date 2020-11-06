@@ -1,2 +1,38 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+import java.util.Scanner;
+import java.io.*;
+
+class mortgageapplacations{
+	public static void main (String[]args){
+		Scanner in = new Scanner(System.in); 
+		System.out.println("Welcome to loan CALCULATOR Please selec the option that best fits you");
+		System.out.println("1 - Loan Approval Calculator");
+		System.out.println("2 - Monthly Payment Calculator");
+		System.out.println("3 -  Loan Approval Reader");
+		System.out.println("4 - Exit");
+int Choice = in.nextInt();
+			switch (Choice) {
+				case 1: System.out.println(loanCalc);
+				break;
+				case 2:
+				System.out.println("You have selected the Monthly Payment Calculator");
+				break;
+				case 3:
+				System.out.println("you have selected the Loan Approval Reader");
+				break;
+				case 4:
+				break;
+		
+		
+	}
+	
+}
+	public static boolean loanCalc (boolean flag){
+		Scanner in = new Scanner(System.in);
+		flag = true;
+		System.out.print("Approved or no");
+		int cow = in.nextInt();
+		return flag;
+	}
+}
